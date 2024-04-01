@@ -61,7 +61,7 @@ The dataset can be found on Hugging Face:
 Main changes:
 
 - convert to conversations format which is supported by [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) - see [sharegpt](https://github.com/OpenAccess-AI-Collective/axolotl?tab=readme-ov-file#conversation)
-- only use rank 1 answers
+- only use best rank answers
 - clean invisible characters and strip - see
 [`mltb2.text.clean_all_invisible_chars_and_strip()`](https://telekom.github.io/mltb2/api-reference/text.html#mltb2.text.clean_all_invisible_chars_and_strip)
 - remove rows with empty text
