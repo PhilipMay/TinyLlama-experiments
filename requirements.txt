@@ -1,0 +1,14 @@
+pandas
+datasets
+ipykernel
+mltb2[transformers,somajo_transformers,openai] @ git+https://github.com/telekom/mltb2.git
+ipywidgets
+black[jupyter]
+mdformat-gfm
+mdformat-frontmatter
+mdformat-footnote
+tqdm
+matplotlib
+scipy
+ruff
+jsonlines
