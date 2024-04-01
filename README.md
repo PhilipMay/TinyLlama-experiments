@@ -55,6 +55,16 @@ Main changes:
 This dataset is created with [`04_convert_nectar.ipynb`](https://github.com/PhilipMay/TinyLlama-experiments/blob/main/04_convert_nectar.ipynb) based on
 [berkeley-nest/Nectar](https://huggingface.co/datasets/berkeley-nest/Nectar).
 
+Main changes:
+
+- convert to conversations format which is supported by [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) - see [sharegpt](https://github.com/OpenAccess-AI-Collective/axolotl?tab=readme-ov-file#conversation)
+- only use rank 1 answers
+- clean invisible characters and strip - see
+[`mltb2.text.clean_all_invisible_chars_and_strip()`](https://telekom.github.io/mltb2/api-reference/text.html#mltb2.text.clean_all_invisible_chars_and_strip)
+- remove rows with empty text
+- remove rows from multiple sources (see `source` column)
+- remove conversations longer than 2048 TinyLlama tokens
+
 ## Axolotl Setup
 
 TODO: add docker command
