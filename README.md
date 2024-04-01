@@ -55,6 +55,9 @@ Main changes:
 This dataset is created with [`04_convert_nectar.ipynb`](https://github.com/PhilipMay/TinyLlama-experiments/blob/main/04_convert_nectar.ipynb) based on
 [berkeley-nest/Nectar](https://huggingface.co/datasets/berkeley-nest/Nectar).
 
+The dataset can be found on Hugging Face:
+[PhilipMay/berkeley_nest_nectar_convert_2048](https://huggingface.co/datasets/PhilipMay/berkeley_nest_nectar_convert_2048)
+
 Main changes:
 
 - convert to conversations format which is supported by [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) - see [sharegpt](https://github.com/OpenAccess-AI-Collective/axolotl?tab=readme-ov-file#conversation)
