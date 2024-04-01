@@ -39,7 +39,6 @@ This dataset is created with [`01_convert_ultrachat_200k.ipynb`](https://github.
 based on [HuggingFaceH4/ultrachat_200k](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k)
 (train_sft and test_sft).
 
-
 The dataset can be found on Hugging Face:
 [PhilipMay/ultrachat_200k_convert_2048](https://huggingface.co/datasets/PhilipMay/ultrachat_200k_convert_2048)
 
@@ -50,6 +49,11 @@ Main changes:
 [`mltb2.text.clean_all_invisible_chars_and_strip()`](https://telekom.github.io/mltb2/api-reference/text.html#mltb2.text.clean_all_invisible_chars_and_strip)
 - remove rows with empty text
 - remove conversations longer than 2048 TinyLlama tokens
+
+### PhilipMay/berkeley_nest_nectar_convert_2048
+
+This dataset is created with [`04_convert_nectar.ipynb`](https://github.com/PhilipMay/TinyLlama-experiments/blob/main/04_convert_nectar.ipynb) based on
+[berkeley-nest/Nectar](https://huggingface.co/datasets/berkeley-nest/Nectar).
 
 ## Axolotl Setup
 
