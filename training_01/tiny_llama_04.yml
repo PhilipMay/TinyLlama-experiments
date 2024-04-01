@@ -1,0 +1,80 @@
+# base model config
+base_model: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+model_type: LlamaForCausalLM
+tokenizer_type: LlamaTokenizer
+special_tokens:
+  bos_token: "<s>"
+  eos_token: "</s>"
+  unk_token: "<unk>"
+tokens:
+  - "<|im_start|>"
+  - "<|im_end|>"
+lora_modules_to_save:
+  - embed_tokens
+  - lm_head
+chat_template: chatml
+
+# qlora config
+load_in_8bit: false
+load_in_4bit: true
+strict: false
+adapter: qlora
+lora_model_dir:
+lora_r: 32
+lora_alpha: 64
+lora_dropout: 0.05
+lora_target_linear: true
+lora_fan_in_fan_out:
+
+# dataset config
+datasets:
+  - path: PhilipMay/ultrachat_200k_convert_2048
+    split: train
+    type: sharegpt
+    conversation: chatml
+
+# saving
+dataset_prepared_path: ./persist/dataset_prepared_path
+output_dir: ./persist/tiny_llama_04
+saves_per_epoch: 20
+#save_steps: 10
+save_total_limit: 2
+#save_strategy: epoch
+auto_resume_from_checkpoints: true
+
+# training hyperparameters
+sequence_len: 1024
+sample_packing: true
+pad_to_sequence_len: true
+gradient_accumulation_steps: 1
+
+micro_batch_size: 8
+
+num_epochs: 1
+optimizer: adamw_bnb_8bit
+weight_decay: 0.0
+learning_rate: 0.0001
+lr_scheduler: cosine
+train_on_inputs: false
+group_by_length: false
+bf16: false
+fp16: false
+tf32: false
+gradient_checkpointing: true
+flash_attention: false
+warmup_steps: 700
+#deepspeed: /workspace/axolotl/deepspeed_configs/zero2.json
+
+# seems to be buggy with sft (and dpo)
+#warmup_ratio: 0.3
+
+# evaluation & logging
+evals_per_epoch: 10
+eval_sample_packing: false
+val_set_size: 0.003
+early_stopping_patience:
+logging_steps: 1
+
+# wabdb config
+wandb_project: tiny
+wandb_name: tiny_llama_04_02
