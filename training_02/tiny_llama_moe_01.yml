@@ -1,0 +1,21 @@
+base_model: PhilipMay/TinyLlama_OpenHermes_v1
+gate_mode: random
+dtype: bfloat16
+experts_per_token: 4
+experts:
+  - source_model: PhilipMay/TinyLlama_OpenHermes_v1
+    positive_prompts: []
+  - source_model: PhilipMay/TinyLlama_OpenHermes_v1
+    positive_prompts: []
+  - source_model: PhilipMay/TinyLlama_SlimOrca_dedup_v1
+    positive_prompts: []
+  - source_model: PhilipMay/TinyLlama_SlimOrca_dedup_v1
+    positive_prompts: []
+  - source_model: PhilipMay/TinyLlama_Nectar_v1
+    positive_prompts: []
+  - source_model: PhilipMay/TinyLlama_Nectar_v1
+    positive_prompts: []
+  - source_model: PhilipMay/TinyLlama_UltraChat_v1
+    positive_prompts: []
+  - source_model: PhilipMay/TinyLlama_UltraChat_v1
+    positive_prompts: []
