@@ -62,7 +62,7 @@ fp16: false
 tf32: false
 gradient_checkpointing: true
 flash_attention: false
-warmup_steps: 120
+warmup_steps: 70
 #deepspeed: /workspace/axolotl/deepspeed_configs/zero2.json
 
 # seems to be buggy with sft (and dpo)
@@ -71,7 +71,7 @@ warmup_steps: 120
 # evaluation & logging
 evals_per_epoch: 30
 eval_sample_packing: false
-val_set_size: 0.005
+val_set_size: 0.01
 early_stopping_patience:
 logging_steps: 1
 
