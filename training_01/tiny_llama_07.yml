@@ -35,7 +35,7 @@ datasets:
 
 # saving
 dataset_prepared_path: ./persist/dataset_prepared_path
-output_dir: ./persist/tiny_llama_07_01
+output_dir: ./persist/tiny_llama_07_02
 saves_per_epoch: 20
 #save_steps: 10
 save_total_limit: 2
@@ -62,7 +62,7 @@ fp16: false
 tf32: false
 gradient_checkpointing: true
 flash_attention: false
-warmup_steps: 70
+warmup_steps: 20
 #deepspeed: /workspace/axolotl/deepspeed_configs/zero2.json
 
 # seems to be buggy with sft (and dpo)
@@ -71,10 +71,10 @@ warmup_steps: 70
 # evaluation & logging
 evals_per_epoch: 30
 eval_sample_packing: false
-val_set_size: 0.01
+val_set_size: 0.02
 early_stopping_patience:
 logging_steps: 1
 
 # wabdb config
 wandb_project: tiny
-wandb_name: tiny_llama_07_01
+wandb_name: tiny_llama_07_02
