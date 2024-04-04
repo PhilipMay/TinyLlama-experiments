@@ -35,7 +35,7 @@ datasets:
 
 # saving
 dataset_prepared_path: ./persist/dataset_prepared_path
-output_dir: ./persist/tiny_llama_06_nosp_01
+output_dir: ./persist/tiny_llama_06_nosp_02
 saves_per_epoch: 20
 #save_steps: 10
 save_total_limit: 2
@@ -77,4 +77,4 @@ logging_steps: 1
 
 # wabdb config
 wandb_project: tiny
-wandb_name: tiny_llama_06_nosp_01
+wandb_name: tiny_llama_06_nosp_02
